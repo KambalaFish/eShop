@@ -1,0 +1,11 @@
+{
+  "name": "eshop",
+  "version": "1.0.0",
+  "description": "root package for shopping app",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "author": "Dmitry Kambalin",
+  "license": "ISC"
+}
