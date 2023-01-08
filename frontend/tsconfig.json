@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/create-react-app/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "allowUnreachableCode": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "target": "es2022",
+    "sourceMap": true,
+    "baseUrl": "./",
+  },
+  "include": ["./src/**/*", "./custom.d.ts"]
+}

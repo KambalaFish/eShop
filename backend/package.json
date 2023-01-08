@@ -4,8 +4,12 @@
   "description": "backend package for shopping app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint ./**/*.{js,ts}"
   },
   "author": "Dmitry Kambalin",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node16-strictest-esm": "^1.0.3",
+    "eslint-plugin-n": "^15.6.0"
+  }
 }
