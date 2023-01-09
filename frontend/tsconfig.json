@@ -9,6 +9,14 @@
     "target": "es2022",
     "sourceMap": true,
     "baseUrl": "./",
+    "noEmit": false,
+    "paths": {
+      "@styles/*": ["src/styles/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+    }
   },
-  "include": ["./src/**/*", "./custom.d.ts"]
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "./custom.d.ts"],
+  "exclude": ["node_modules"]
 }
