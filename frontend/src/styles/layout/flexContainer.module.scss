@@ -1,0 +1,25 @@
+@use "@styles/abstracts/_mixins.scss" as m;
+
+.row {
+  @include m.flex;
+
+  flex-direction: row;
+
+  &JustifyContentCenter {
+    justify-content: center;
+  }
+
+  &AlignItemsStart {
+    align-items: flex-start;
+  }
+}
+
+.column {
+  @include m.flex($ai: flex-start);
+
+  flex-direction: column;
+
+  &CentrallyAligned {
+    align-items: center;
+  }
+}
