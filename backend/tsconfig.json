@@ -7,5 +7,5 @@
     "baseUrl": "./",
     "module": "CommonJS"
   },
-  "include": ["./src/**/*", ".eslintrc.json"]
+  "include": ["./src/**/*"]
 }
