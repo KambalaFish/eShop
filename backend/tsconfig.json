@@ -5,6 +5,7 @@
     "removeComments": false,
     "allowJs": true,
     "baseUrl": "./",
+    "module": "CommonJS"
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*", ".eslintrc.json"]
 }

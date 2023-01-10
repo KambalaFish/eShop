@@ -2,7 +2,7 @@
   "name": "eshop.backend",
   "version": "1.0.0",
   "description": "backend package for shopping app",
-  "main": "server.js",
+  "main": "./src/app.ts",
   "scripts": {
     "lint": "eslint ./**/*.{js,ts}"
   },
@@ -18,5 +18,8 @@
     "pino": "^8.8.0",
     "pino-pretty": "^9.1.1"
   },
-  "type": "module"
+  "type": "commonjs",
+  "engines": {
+    "node": ">=16"
+  }
 }
