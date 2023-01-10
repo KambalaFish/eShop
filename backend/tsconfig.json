@@ -4,8 +4,18 @@
     "outDir": "./dist/",
     "removeComments": false,
     "allowJs": true,
-    "baseUrl": "./",
-    "module": "CommonJS"
+    "baseUrl": "./src/",
+    "module": "CommonJS",
+    "noUnusedParameters": false,
+    "paths": {
+      "@utils/*": ["utils/*"],
+      "@routes/*": ["routes/*"],
+      "@services/*": ["services/*"],
+      "@controllers/*": ["controllers/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@models/*": ["models/*"],
+      "@schemas/*": ["schemas/*"]
+    }
   },
   "include": ["./src/**/*"]
 }

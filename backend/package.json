@@ -5,7 +5,7 @@
   "main": "./src/app.ts",
   "scripts": {
     "lint": "eslint ./**/*.{js,ts}",
-    "backendDev": "ts-node-dev --respawn src/app.ts",
+    "backendDev": "ts-node-dev --respawn -r tsconfig-paths/register src/app.ts",
     "backendBuild": "tsc"
   },
   "author": "Dmitry Kambalin",
@@ -16,7 +16,8 @@
     "@types/express": "^4.17.15",
     "@types/pino": "^7.0.5",
     "eslint-plugin-n": "^15.6.0",
-    "ts-node-dev": "^2.0.0"
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.1.2"
   },
   "dependencies": {
     "config": "^3.3.8",
