@@ -9,10 +9,12 @@
     "noUnusedParameters": false,
     "paths": {
       "@utils/*": ["utils/*"],
+      "@routes": ["routes"],
       "@routes/*": ["routes/*"],
       "@services/*": ["services/*"],
       "@controllers/*": ["controllers/*"],
-      "@middlewares/*": ["middlewares/*"],
+      "@middlewares/beforeRoutes": ["middlewares/beforeRoutes"],
+      "@middlewares/afterRoutes": ["middlewares/afterRoutes"],
       "@models/*": ["models/*"],
       "@schemas/*": ["schemas/*"]
     }
