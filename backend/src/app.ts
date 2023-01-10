@@ -4,9 +4,13 @@ dotenv.config();
 import config from 'config';
 import express from 'express';
 import { logger } from './utils/logger';
+import { connectToDB } from './utils/connectToDB';
 
 const port = config.get<number>('port');
 
 const app = express();
 
-app.listen(port, () => logger.info(`server is running on port ${port}`));
+app.listen(port, async () => {
+  logger.info(`Server is running on port ${port}`);
+  await connectToDB();
+});
