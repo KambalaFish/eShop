@@ -3,7 +3,9 @@ import { logger } from '@utils/logger';
 
 const logRequestMiddleware = (req: Request, res: Response, next: NextFunction) => {
   logger.info(
-    `Incoming -> method: [${req.method}] - url: [${req.url}] - IP: [${req.socket.remoteAddress}]`
+    `\nIncoming -> method: [${req.method}]\nurl: [${
+      req.url
+    }]\nreq.body: [${JSON.stringify(req.body, null, 4)}]`
   );
   res.on('finish', () => {
     logger.info(
