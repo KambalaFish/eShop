@@ -1,9 +1,12 @@
 import type { Express, Request, Response } from 'express';
-import { OK } from '@utils/statusCodes';
+import { StatusCodes } from '@utils/statusCodes';
+import { categoryRouter } from '@routes/category.routes';
 const routes = (app: Express) => {
   app.get('/ping', (req: Request, res: Response) => {
-    res.status(OK).json({ message: 'pong' });
+    res.status(StatusCodes.OK).json({ message: 'pong' });
   });
+
+  app.use('/category', categoryRouter);
 };
 
 export { routes };
