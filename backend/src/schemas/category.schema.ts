@@ -1,5 +1,6 @@
 import Joi from 'joi';
 import { createRequestSchema } from '@utils/createRequestSchema';
+import { ExtendedJoi } from '@schemas/extendedJoi';
 
 const categoryCreationSchema = createRequestSchema({
   body: Joi.object({
@@ -9,13 +10,13 @@ const categoryCreationSchema = createRequestSchema({
 
 const params = {
   params: Joi.object({
-    categoryId: Joi.string().min(1).required(),
+    categoryId: ExtendedJoi.objectId(),
   }).required(),
 };
 
 const categoryUpdateSchema = createRequestSchema({
   body: Joi.object({
-    _id: Joi.string().min(1),
+    _id: ExtendedJoi.objectId(),
     name: Joi.string().min(2),
   })
     .min(1)
