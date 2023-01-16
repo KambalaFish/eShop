@@ -17,7 +17,8 @@
       "@middlewares/beforeRoutes": ["middlewares/beforeRoutes"],
       "@middlewares/afterRoutes": ["middlewares/afterRoutes"],
       "@models/*": ["models/*"],
-      "@schemas/*": ["schemas/*"]
+      "@schemas/*": ["schemas/*"],
+      "@interfaces/*": ["interfaces/*"]
     }
   },
   "include": ["./src/**/*"]
