@@ -1,4 +1,4 @@
-import type { RequestSchema } from '@middlewares/routeMiddlewares/validateResources';
+import type { RequestSchema } from '@interfaces/RequestSchema';
 import Joi from 'joi';
 
 const createRequestSchema = (schema: RequestSchema) => {
