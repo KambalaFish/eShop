@@ -1,10 +1,5 @@
 import { Router } from 'express';
-import {
-  createCategoryHandler,
-  deleteCategoryHandler,
-  getAllCategoriesHandler,
-  updateCategoryHandler,
-} from '@controllers/category.controller';
+import { categoryController } from '@controllers/category.controller';
 import { validateResources } from '@middlewares/routeMiddlewares/validateResources';
 import {
   categoryCreationSchema,
@@ -16,12 +11,20 @@ const categoryRouter = Router();
 
 categoryRouter
   .route('/')
-  .get(getAllCategoriesHandler)
-  .post(validateResources(categoryCreationSchema), createCategoryHandler);
+  .get(categoryController.get)
+  .post(validateResources(categoryCreationSchema), categoryController.create);
+
+const idParameterName = 'categoryId';
 
 categoryRouter
-  .route('/:categoryId')
-  .put(validateResources(categoryUpdateSchema), updateCategoryHandler)
-  .delete(validateResources(categoryDeleteSchema), deleteCategoryHandler);
+  .route(`/:${idParameterName}`)
+  .put(
+    validateResources(categoryUpdateSchema),
+    categoryController.updateByIdWrapper(idParameterName)
+  )
+  .delete(
+    validateResources(categoryDeleteSchema),
+    categoryController.deleteByIdWrapper(idParameterName)
+  );
 
 export { categoryRouter };
